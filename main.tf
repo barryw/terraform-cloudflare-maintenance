@@ -1,5 +1,6 @@
 resource "cloudflare_worker_script" "this" {
-  name = format("maintenance-%s", replace(var.cloudflare_zone, ".", "-"))
+  name       = format("maintenance-%s", replace(var.cloudflare_zone, ".", "-"))
+  account_id = var.account_id
   content = templatefile("${path.module}/maintenance.js", {
     company_name   = var.company_name
     logo_url       = var.logo_url

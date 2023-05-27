@@ -2,6 +2,10 @@ variable "cloudflare_zone" {
   type = string
 }
 
+variable "account_id" {
+  type = string
+}
+
 variable "patterns" {
   type        = list(string)
   description = "The DNS pattern list to deploy the maintenance page to."
