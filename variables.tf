@@ -37,6 +37,11 @@ variable "logo_url" {
   description = "The logo to be displayed."
 }
 
+variable "maintenance_image_url" {
+  type        = string
+  description = "The url to the background maintenance image."
+}
+
 variable "favicon_url" {
   type        = string
   default     = "https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/maintenance-512.png"
